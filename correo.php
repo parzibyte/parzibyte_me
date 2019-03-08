@@ -1,10 +1,20 @@
 <?php
-if (!isset($_POST["correo"]) || !isset($_POST["mensaje"])) exit;
-$correo = htmlentities($_POST["correo"]);
-$mensaje = htmlentities($_POST["mensaje"]);
+if (!isset($_POST["correo"]) || !isset($_POST["mensaje"])) {
+    exit;
+}
+
+$correo = $_POST["correo"];
+$mensaje = $_POST["mensaje"];
+
+$correo = filter_var($correo, FILTER_VALIDATE_EMAIL);
+if (!$correo) {
+    echo "Correo inválido. Intenta con otro correo.";
+    exit;
+}
+
 $datos = "Correo: $correo\nMensaje: $mensaje";
 $destinatario = "contacto@parzibyte.me";
-$encabezados = 'From: Sitio web personal<contacto@parzibyte.me>' . "\r\n";
+$encabezados = 'From: ' . $correo . "\r\n";
 $resultado = mail($destinatario, "Mensaje de sitio web", "Tienes un nuevo mensaje:\n$datos.\n--Fin del mensaje--", $encabezados);
 if ($resultado) {
     echo "Tu mensaje se ha enviado correctamente.";
