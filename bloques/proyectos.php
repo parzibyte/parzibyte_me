@@ -3,14 +3,14 @@ $proyectos = [
     [
         "nombre" => "Sublime POS 3",
         "descripcion" => "Mi mayor creación hasta el momento. Un sistema de ventas multiplataforma, multicaja, completo, que se ejecuta en la nube y que es totalmente gratuito. Administra clientes, cajeros, ventas, productos y muchas cosas más",
-        "demo" => "http://spos3.appsperfectas.com:2811/#/registro",
-        "imagen" => "http://appsperfectas.com/apps/sublime-pos/img/caracteristicas/escritorio1.png",
+        "demo" => "http://bit.ly/sublime-pos",
+        "imagen" => "https://parzibyte.me/apps/sublime-pos-3/img/caracteristicas/escritorio1.png",
         "creado_con" => ["VueJS", "Go", "MySQL"]
     ],
     [
         "nombre" => "Página oficial de Sublime POS 3",
         "descripcion" => "La página web para el punto de venta gratuito Sublime POS 3",
-        "demo" => "http://bit.ly/spos_3",
+        "demo" => "http://bit.ly/sublime-pos",
         "imagen" => "$urlBase/img/portafolio/pagina-sublime-pos-3.jpg",
         "creado_con" => ["BulmaCSS", "PHP", "Twig"]
     ],
