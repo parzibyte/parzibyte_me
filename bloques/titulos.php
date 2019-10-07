@@ -5,22 +5,6 @@
             Personalmente pienso que la experiencia vale más que los títulos; pero igualmente pongo aquí algunos logros personales y cosas sobre mi educación
         </p>
     </div>
-    <div class="col-12">
-        <div class="card mb-3">
-            <img id="img-olimpiada" src="<?php echo $imagenGenerica ?>"
-                 data-src="<?php echo $urlBase ?>/img/convivencia-cultural.jpg"
-                 class="card-img-top" alt="Olimpiada del conocimiento infantil">
-            <div class="card-body">
-                <h2 class="card-title">Olimpiada del conocimiento infantil</h2>
-                <p class="card-text">
-                    Hace algunos años gané un concurso de algo llamado <strong>Olimpiada del conocimiento infantil</strong> y pude asistir a la <strong>convivencia cultural</strong>. Se trataba de un concurso en donde ponías a prueba tus habilidades a nivel regional y luego estatal, al final los ganadores de cada estado se reunían, convivían y se reunían con el presidente de México (en aquel entonces era Felipe Calderón)
-                </p>
-                <p class="card-text">
-                    <small class="text-muted">2009</small>
-                </p>
-            </div>
-        </div>
-    </div>
     <div class="col-12 col-md-6 mb-3">
         <div class="card">
             <div class="card-body">

@@ -17,6 +17,7 @@ $imagenGenerica = "$urlBase/img/placeholder.jpg";
 <html lang="es">
 
 <head>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo trim(file_get_contents("gtag.txt")) ?>"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -184,16 +185,6 @@ $imagenGenerica = "$urlBase/img/placeholder.jpg";
             }
         }, opciones);
 
-        const observadorOlimpiada = new IntersectionObserver(function (entradas) {
-            entradas.forEach(entrada => {
-                if (entrada.intersectionRatio > 0) {
-                    entrada.target.src = entrada.target.dataset.src;
-                    observadorOlimpiada.unobserve(entrada.target);
-                }
-            });
-        });
-
-        observadorOlimpiada.observe($imagenOlimpiada);
         $imagenes.forEach($imagen => observadorImagenes.observe($imagen));
         observadorIconos.observe($seccionHabilidades);
     });

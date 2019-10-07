@@ -4,7 +4,7 @@
         <p class="legible">
             <?php echo $persona["descripcion"] ?>
         </p>
-        <a target="_blank" href="https://www.parzibyte.me/files/CV_LuisCabreraBenito.pdf" class="btn btn-success btn-lg">Descarga mi CV</a> <a href="#portafolio" class="btn btn-info btn-lg">Portafolio</a> <a href="#habilidades" class="btn btn-primary btn-lg">Habilidades</a> <a target="_blank" href="<?php echo $persona["blog"] ?>" class="btn btn-warning btn-lg">Blog</a>
+        <a target="_blank" href="https://parzibyte.github.io/cv/" class="btn btn-success btn-lg">Mira o descarga mi CV</a> <a href="#portafolio" class="btn btn-info btn-lg">Portafolio</a> <a href="#habilidades" class="btn btn-primary btn-lg">Habilidades</a> <a target="_blank" href="<?php echo $persona["blog"] ?>" class="btn btn-warning btn-lg">Blog</a>
         <br><br>
         <div class="row text-center">
             <div class="col-3 col-md-2 offset-md-2">
@@ -103,8 +103,15 @@
                           id="mensaje" rows="3" cols="2"></textarea>
             </div>
             <div class="form-group">
-                <small>No te preocupes, no compartiré tus datos con nadie. Asegúrate de escribir un correo verdadero, pues ahí te responderé
-                </small>
+            <label>Por favor, ayúdame a verificar que no eres un bot</label>
+                <div
+                    class="g-recaptcha"
+                    data-sitekey="[TU_CLAVE]">
+                </div>
+            </div>
+            <div class="form-group">
+                <p>No te preocupes, no compartiré tus datos con nadie. Asegúrate de escribir un correo verdadero, pues ahí te responderé
+                </p>
             </div>
             <div class="form-group">
                 <input class="btn btn-success" type="submit" value="Enviar mensaje">

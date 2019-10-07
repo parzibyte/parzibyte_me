@@ -3,6 +3,7 @@
 <html lang="es">
 
 <head>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-82804435-7"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -91,7 +92,7 @@
         <h1 class="text-center">Sobre mí</h1>
         <p class="legible">
             Hola, soy Luis Cabrera Benito (a.k.a. parzibyte): un desarrollador móvil y full-stack profesional con más de 5 años de experiencia, especializado en <strong>PHP, JavaScript, Python y Go</strong> (también programo muy bien en otros lenguajes, puedes preguntar enviándome un mensaje)        </p>
-        <a target="_blank" href="https://www.parzibyte.me/files/CV_LuisCabreraBenito.pdf" class="btn btn-success btn-lg">Descarga mi CV</a> <a href="#portafolio" class="btn btn-info btn-lg">Portafolio</a> <a href="#habilidades" class="btn btn-primary btn-lg">Habilidades</a> <a target="_blank" href="https://parzibyte.me/blog" class="btn btn-warning btn-lg">Blog</a>
+        <a target="_blank" href="https://parzibyte.github.io/cv/" class="btn btn-success btn-lg">Mira o descarga mi CV</a> <a href="#portafolio" class="btn btn-info btn-lg">Portafolio</a> <a href="#habilidades" class="btn btn-primary btn-lg">Habilidades</a> <a target="_blank" href="https://parzibyte.me/blog" class="btn btn-warning btn-lg">Blog</a>
         <br><br>
         <div class="row text-center">
             <div class="col-3 col-md-2 offset-md-2">
@@ -154,7 +155,7 @@
                 </a>
             </div>
             <div class="col-3 col-md-2">
-                <a target="_blank" href="mailto:contacto@parzibyte.me">
+                <a target="_blank" href="mailto:parzibyte@gmail.com">
                     <img src="https://parzibyte.me/img/email-64.png"
                          class="rounded-circle mx-auto d-block"
                          title="Enviar correo electrónico a Luis Cabrera Benito"
@@ -190,8 +191,15 @@
                           id="mensaje" rows="3" cols="2"></textarea>
             </div>
             <div class="form-group">
-                <small>No te preocupes, no compartiré tus datos con nadie. Asegúrate de escribir un correo verdadero, pues ahí te responderé
-                </small>
+            <label>Por favor, ayúdame a verificar que no eres un bot</label>
+                <div
+                    class="g-recaptcha"
+                    data-sitekey="[TU_CLAVE]">
+                </div>
+            </div>
+            <div class="form-group">
+                <p>No te preocupes, no compartiré tus datos con nadie. Asegúrate de escribir un correo verdadero, pues ahí te responderé
+                </p>
             </div>
             <div class="form-group">
                 <input class="btn btn-success" type="submit" value="Enviar mensaje">
@@ -1351,22 +1359,6 @@
             Personalmente pienso que la experiencia vale más que los títulos; pero igualmente pongo aquí algunos logros personales y cosas sobre mi educación
         </p>
     </div>
-    <div class="col-12">
-        <div class="card mb-3">
-            <img id="img-olimpiada" src="https://parzibyte.me/img/placeholder.jpg"
-                 data-src="https://parzibyte.me/img/convivencia-cultural.jpg"
-                 class="card-img-top" alt="Olimpiada del conocimiento infantil">
-            <div class="card-body">
-                <h2 class="card-title">Olimpiada del conocimiento infantil</h2>
-                <p class="card-text">
-                    Hace algunos años gané un concurso de algo llamado <strong>Olimpiada del conocimiento infantil</strong> y pude asistir a la <strong>convivencia cultural</strong>. Se trataba de un concurso en donde ponías a prueba tus habilidades a nivel regional y luego estatal, al final los ganadores de cada estado se reunían, convivían y se reunían con el presidente de México (en aquel entonces era Felipe Calderón)
-                </p>
-                <p class="card-text">
-                    <small class="text-muted">2009</small>
-                </p>
-            </div>
-        </div>
-    </div>
     <div class="col-12 col-md-6 mb-3">
         <div class="card">
             <div class="card-body">
@@ -1526,16 +1518,6 @@
             }
         }, opciones);
 
-        const observadorOlimpiada = new IntersectionObserver(function (entradas) {
-            entradas.forEach(entrada => {
-                if (entrada.intersectionRatio > 0) {
-                    entrada.target.src = entrada.target.dataset.src;
-                    observadorOlimpiada.unobserve(entrada.target);
-                }
-            });
-        });
-
-        observadorOlimpiada.observe($imagenOlimpiada);
         $imagenes.forEach($imagen => observadorImagenes.observe($imagen));
         observadorIconos.observe($seccionHabilidades);
     });
