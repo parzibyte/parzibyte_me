@@ -32,7 +32,7 @@
                 </a>
             </div>
             <div class="col-3 col-md-2">
-                <a target="_blank" href="https://t.me/parzibyte_channel">
+                <a target="_blank" href="https://t.me/joinchat/AAAAAFYVZ70V7PDPCaogBw">
                     <img src="<?php echo $urlBase ?>/img/telegram-64.png"
                          class="rounded-circle mx-auto d-block"
                          title="Seguir a <?php echo $persona["nombre"] ?> en Telegram"
